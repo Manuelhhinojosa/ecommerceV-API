@@ -14,6 +14,11 @@ const productControllers = require("../controllers/productControllers");
 // routes
 //
 // create a new product route
-router.post("/create", protect, admin, productControllers.createOneProduct);
+router.post(
+  "/createproduct",
+  protect,
+  admin,
+  productControllers.createOneProduct
+);
 
 module.exports = router;
