@@ -1,7 +1,6 @@
-// packages
-const monggose = require("mongoose");
+// dependencies
+const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
-const { default: mongoose } = require("mongoose");
 
 // User model
 const userSchema = new mongoose.Schema(

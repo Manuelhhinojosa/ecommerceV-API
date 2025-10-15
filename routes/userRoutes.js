@@ -11,11 +11,13 @@ const { protect } = require("../middleware/authMiddleware");
 // User cotrollers functions
 const userControllers = require("../controllers/userControllers");
 
-// registration route
+// routes
+//
+// user registration route
 router.post("/register", userControllers.registerUser);
-// login route
+// user login route
 router.post("/login", userControllers.userLogin);
-// get one user
+// get one user || profile route
 router.get("/profile", protect, userControllers.getOneUser);
 
 module.exports = router;

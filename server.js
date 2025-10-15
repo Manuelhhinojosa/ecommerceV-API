@@ -9,6 +9,7 @@ const connectDB = require("./config/db");
 //
 // routes import
 const userRoutes = require("./routes/userRoutes");
+const productRoutes = require("./routes/productRoutes");
 
 // app creation and configuration
 const app = express();
@@ -30,6 +31,8 @@ app.get("/", (req, res) => {
 // routes
 // user routes
 app.use("/api/users", userRoutes);
+// product routes
+app.use("/api/products", productRoutes);
 
 // server
 app.listen(PORT, () => {
